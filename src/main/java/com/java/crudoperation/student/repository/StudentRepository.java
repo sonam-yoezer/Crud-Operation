@@ -10,8 +10,5 @@ public interface StudentRepository extends JpaRepository<Student,Long> {
 
     boolean existsByName(String name);
     List<Student> findAll();
-<<<<<<< HEAD
-  
-=======
->>>>>>> 9135693 (CO03: Implemented get, getall, delete and update method)
+
 }

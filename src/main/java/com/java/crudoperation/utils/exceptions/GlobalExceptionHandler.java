@@ -23,16 +23,4 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(restResponse);
     }
 
-<<<<<<< HEAD
-=======
-    // Handler for NotFoundException
-    @ExceptionHandler(NotFoundException.class)
-    public ResponseEntity<RestResponse> handleNotFoundException(NotFoundException e) {
-        RestResponse restResponse = new RestResponse();
-        restResponse.setStatus(false);
-        restResponse.setMessage(e.getMessage());
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(restResponse);
-    }
-
->>>>>>> 9135693 (CO03: Implemented get, getall, delete and update method)
 }

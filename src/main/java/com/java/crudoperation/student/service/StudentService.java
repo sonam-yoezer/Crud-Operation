@@ -16,8 +16,5 @@ public interface StudentService extends IGenericCrudService<Long, Student> {
     Student findById(long id);
 
     Student updateStudent(Long id, Student movieDetails);
-<<<<<<< HEAD
 
-=======
->>>>>>> 9135693 (CO03: Implemented get, getall, delete and update method)
 }
