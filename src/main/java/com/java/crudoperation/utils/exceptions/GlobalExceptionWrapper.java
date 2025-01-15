@@ -21,7 +21,7 @@ public class GlobalExceptionWrapper {
     @Getter
     public static class BadRequestException extends RuntimeException implements IGlobalException {
 
-        private final HttpStatus httpStatus;
+        private HttpStatus httpStatus;
 
         public BadRequestException(String message) {
             super(message);
