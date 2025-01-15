@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import com.java.crudoperation.utils.exceptions.NotFoundException;
+
 import java.util.List;
 
 @Service
@@ -21,10 +22,6 @@ public class StudentServiceImpl implements StudentService {
     public Student save(@NonNull Student student) {
         try {
             if (studentRepository.existsByName(student.getName())) {
-
-    public Student save(@NonNull Student student){
-        try {
-            if (studentRepository.existsByName(student.getName())){
                 throw new GlobalExceptionWrapper.BadRequestException("Student with name '" + student.getName() + "' already exists ");
             }
             return studentRepository.save(student);
@@ -94,7 +91,6 @@ public class StudentServiceImpl implements StudentService {
 
         // Save the updated movie back to the database
         return studentRepository.save(existingStudent);
-        return "";
     }
 
 }

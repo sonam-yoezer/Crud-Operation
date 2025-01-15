@@ -5,8 +5,6 @@ import lombok.Getter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import java.io.IOException;
-
 /**
  * Contains all custom exceptions with corresponding constructor enabled.
  */
