@@ -5,8 +5,6 @@ import lombok.Getter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import java.io.IOException;
-
 /**
  * Contains all custom exceptions with corresponding constructor enabled.
  */
@@ -21,7 +19,7 @@ public class GlobalExceptionWrapper {
     @Getter
     public static class BadRequestException extends RuntimeException implements IGlobalException {
 
-        private final HttpStatus httpStatus;
+        private HttpStatus httpStatus;
 
         public BadRequestException(String message) {
             super(message);
