@@ -9,12 +9,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    // Handler for BadRequestException
     @ExceptionHandler(GlobalExceptionWrapper.BadRequestException.class)
     public ResponseEntity<RestResponse> handleBadRequestException(GlobalExceptionWrapper.BadRequestException e) {
         return e.getResponse(e);  // Get the custom error response
     }
-
     // Handler for NotFoundException
     @ExceptionHandler(NotFoundException.class)
     public ResponseEntity<RestResponse> handleNotFoundException(NotFoundException e) {
